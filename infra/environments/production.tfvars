@@ -1,0 +1,18 @@
+project_name                          = "<PROJECT_NAME>"
+environment                           = "production"
+aws_region                            = "ap-northeast-1"
+github_owner                          = "<GITHUB_OWNER>"
+github_repository                     = "<GITHUB_REPOSITORY>"
+cloudfront_alias_domain               = "<ALIAS_DOMAIN>"
+acm_lookup_domain                     = "<ACM_DOMAIN>"
+cloudfront_price_class                = "PriceClass_100"
+cloudfront_default_root_object        = "index.html"
+cloudfront_http_version               = "http3"
+cloudfront_cache_policy_id            = "658327ea-f89d-4fab-a63d-7e88639e58f6"
+cloudfront_origin_request_policy_id   = "88a5eaf4-2fd4-4709-b370-b4c650ea3fcf"
+cloudfront_response_headers_policy_id = "67f7725c-6f97-4210-82d7-5512b31e9d03"
+default_tags = {
+  Project     = "<PROJECT_NAME>"
+  Environment = "production"
+  IaC         = "terraform"
+}

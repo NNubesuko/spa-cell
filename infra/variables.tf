@@ -1,81 +1,81 @@
 variable "project_name" {
-  description = "Base project identifier used for resource naming."
+  description = "プロジェクト名"
   type        = string
 }
 
 variable "environment" {
-  description = "Short environment name (e.g. develop, staging, production)."
+  description = "環境名(例: develop、staging、production)"
   type        = string
 }
 
 variable "aws_region" {
-  description = "AWS region where resources are created."
+  description = "AWSリージョン"
   type        = string
 }
 
 variable "assume_role_arn" {
-  description = "Optional IAM role ARN to assume for Terraform actions."
+  description = "Terraform操作で引き受けるオプションのIAMロールARN"
   type        = string
   default     = null
 }
 
 variable "github_owner" {
-  description = "GitHub organisation or user owning the repository."
+  description = "GitHubの組織またはリポジトリを所有するユーザー名"
   type        = string
 }
 
 variable "github_repository" {
-  description = "GitHub repository name used for OIDC conditions."
+  description = "OIDC条件に使用されるGitHubリポジトリ名"
   type        = string
 }
 
 variable "cloudfront_alias_domain" {
-  description = "Primary alias domain served by CloudFront."
+  description = "CloudFrontが提供するプライマリアイラスドメイン"
   type        = string
 }
 
 variable "acm_lookup_domain" {
-  description = "Domain name used to lookup the ACM certificate in us-east-1."
+  description = "us-east-1でACM証明書を検索するために使用されるドメイン名"
   type        = string
 }
 
 variable "cloudfront_price_class" {
-  description = "CloudFront price class setting."
+  description = "CloudFrontの価格クラス設定"
   type        = string
 }
 
 variable "cloudfront_default_root_object" {
-  description = "Default root object for the CloudFront distribution."
+  description = "CloudFrontディストリビューションのデフォルトルートオブジェクト"
   type        = string
 }
 
 variable "cloudfront_http_version" {
-  description = "HTTP protocol version supported by CloudFront."
+  description = "CloudFrontがサポートするHTTPプロトコルバージョン"
   type        = string
 }
 
 variable "cloudfront_cache_policy_id" {
-  description = "Cache policy ID applied to CloudFront default cache behaviour."
+  description = "CloudFrontのデフォルトキャッシュ動作に適用されるキャッシュポリシーID"
   type        = string
 }
 
 variable "cloudfront_origin_request_policy_id" {
-  description = "Origin request policy ID applied to CloudFront."
+  description = "CloudFrontに適用されるオリジンリクエストポリシーID"
   type        = string
 }
 
 variable "cloudfront_response_headers_policy_id" {
-  description = "Response headers policy ID applied to CloudFront."
+  description = "CloudFrontに適用されるレスポンスヘッダーポリシーID"
   type        = string
 }
 
 variable "default_tags" {
-  description = "Default tags applied to supported AWS resources."
+  description = "共通タグ"
   type        = map(string)
 }
 
 variable "github_oidc_thumbprint_list" {
-  description = "Trusted thumbprints for the GitHub OIDC provider."
+  description = "GitHub OIDCプロバイダーの信頼されたサムプリント"
   type        = list(string)
   default = [
     "6938fd4d98bab03faadb97b34396831e3780aea1",
